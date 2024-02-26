@@ -1,0 +1,12 @@
+.chiuso {
+    border: 1px black solid;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+.espanso {
+    border: 1px black solid;
+    width: fit-content;
+    height: 200px;
+    padding: 10px;
+}
