@@ -1,7 +1,10 @@
-<div class="card">
+<div>
    <div class="card-body">
      <h5 class="card-title">{{mail.subject}} | {{mail.receiver}}</h5> 
      <p class="card-text" *ngIf = 'nascondi'>{{mail.text}}</p>
-     <a href="#" class="btn btn-primary" (click) = 'espandi()'>Espandi</a>
+     <a *ngIf = '!(nascondi)' class="btn btn-primary" (click) = 'espandi()'>Espandi</a>
+     <a *ngIf = 'nascondi' class="btn btn-primary" (click) = 'espandi()'>Chiudi</a>
+     <a *ngIf = 'nascondi' class="btn btn-warning mx-2 border-secondary" (click) = 'speciale()'>Speciale</a>
+     
    </div>
  </div>

@@ -8,10 +8,16 @@ import { Email } from '../app.email';
 })
 export class SentMailComponent {
   @Input() mail: Email;
-  @HostBinding('attr.class') cssClass = 'card mt-3';
+  @HostBinding('class') cssColor = 'card bg-light mt-3';
   nascondi = false
   espandi(): boolean {
     this.nascondi = !this.nascondi
+    return false
+  }
+  speciale(): boolean {
+    if (this.cssColor == 'card bg-warning mt-3') {
+      this.cssColor = 'card bg-light mt-3';
+    } else this.cssColor = 'card bg-warning mt-3';
     return false
   }
 }
