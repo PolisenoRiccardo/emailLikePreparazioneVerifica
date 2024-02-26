@@ -7,5 +7,18 @@ import { Email } from './app.email';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'email-preparazione';
+  casella: Email[];
+  receiver : string;
+  object : string;
+  text : string;
+  constructor() {
+    this.casella = [
+      new Email('Sandro', 'Te lo dovevo dire', 'Ho detto Sandro...')
+    ]
+  }
+  nuovaMail(receiver: HTMLInputElement, object:HTMLInputElement, text:HTMLInputElement): boolean {
+    this.casella.push(new Email(receiver.value, object.value, text.value));
+    return false
+  }
+
 }

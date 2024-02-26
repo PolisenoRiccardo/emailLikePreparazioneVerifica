@@ -1,10 +1,10 @@
 <h1>Mail</h1>
 <form>
-  <input type="text" name = 'to' #receiver><label for="to"> A</label>
+  <input type="text" name = 'to' #newreceiver><label for="to"> A</label>
   <br>
-  <input type="text" name = 'Oggetto' #newobject><label for="to"> Oggetto</label>
+  <input type="text" name = 'Oggetto' #newobject><label for="Oggetto"> Oggetto</label>
   <br>
-  <input type="text" name = 'Contenuto' #text><label for="to"> Contenuto</label>
+  <input type="text" name = 'Contenuto' #newtext><label for="Contenuto"> Contenuto</label>
   <br>
-  <button>Invia</button>
+  <button (click) = "nuovaMail(newreceiver, newobject, newtext)">Invia</button>
 </form>
