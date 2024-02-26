@@ -16,8 +16,8 @@ export class AppComponent {
       new Email('Sandro', 'Te lo dovevo dire', 'Ho detto Sandro...')
     ]
   }
-  nuovaMail(receiver: HTMLInputElement, object:HTMLInputElement, text:HTMLInputElement): boolean {
-    this.casella.push(new Email(receiver.value, object.value, text.value));
+  nuovaMail(receiver: HTMLInputElement, subject:HTMLInputElement, text:HTMLInputElement): boolean {
+    this.casella.push(new Email(receiver.value, subject.value, text.value));
     return false
   }
 

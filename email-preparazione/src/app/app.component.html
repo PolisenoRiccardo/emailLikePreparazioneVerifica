@@ -2,9 +2,13 @@
 <form>
   <input type="text" name = 'to' #newreceiver><label for="to"> A</label>
   <br>
-  <input type="text" name = 'Oggetto' #newobject><label for="Oggetto"> Oggetto</label>
+  <input type="text" name = 'Oggetto' #newsubject><label for="Oggetto"> Oggetto</label>
   <br>
   <input type="text" name = 'Contenuto' #newtext><label for="Contenuto"> Contenuto</label>
   <br>
-  <button (click) = "nuovaMail(newreceiver, newobject, newtext)">Invia</button>
+  <button (click) = "nuovaMail(newreceiver, newsubject, newtext)">Invia</button>
 </form>
+
+<div>
+<app-sent-mail *ngFor = "let mail of casella" [mail] = 'mail' ></app-sent-mail>
+</div>
