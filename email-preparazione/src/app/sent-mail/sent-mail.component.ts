@@ -8,6 +8,7 @@ import { Email } from '../app.email';
 })
 export class SentMailComponent {
   @Input() mail: Email;
+  @HostBinding('attr.class') cssClass = 'card mt-3';
   nascondi = false
   espandi(): boolean {
     this.nascondi = !this.nascondi
