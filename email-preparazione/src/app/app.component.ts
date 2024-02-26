@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Email } from './app.email';
 
 @Component({
   selector: 'app-root',
