@@ -8,15 +8,9 @@ import { Email } from '../app.email';
 })
 export class SentMailComponent {
   @Input() mail: Email;
-  @HostBinding('attr.class') cssClass = 'chiuso';  
+  nascondi = false
   espandi(): boolean {
-    if (this.cssClass == 'chiuso') {
-      this.cssClass = 'espanso';
-    } 
-      else if (this.cssClass == 'espanso')      
-    { 
-      this.cssClass = 'chiuso';
-    }
+    this.nascondi = !this.nascondi
     return false
   }
 }
